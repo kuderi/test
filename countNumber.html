@@ -1,0 +1,36 @@
+<template>
+  <div>
+    <h1>Parent Component</h1>
+    <ChildComponent />
+  </div>
+</template>
+
+<script>
+const ChildComponent = {
+  template: `
+    <div>
+      <h2>Child Component</h2>
+    </div>
+  `
+}
+
+export default {
+  components: {
+    ChildComponent
+  }
+}
+</script>
+
+<script>
+import Vue from 'vue'
+
+new Vue({
+  el: '#app',
+  components: {
+    ParentComponent
+  },
+  template: '<ParentComponent />'
+})
+</script>
+
+<div id="app"></div>
