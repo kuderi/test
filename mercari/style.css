@@ -1,0 +1,106 @@
+/* ============================================================== */
+/* 全体 */
+body {
+    margin: 0px;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 1000px;
+    padding: 30px;
+}
+
+/* ============================================================== */
+/* ヘッダー */
+header {
+    background-color: red;
+    padding: 0px 35px
+}
+    /* ヘッダー１ */
+    .head1 {
+        
+    }
+    /* ヘッダー２ */
+    .head2 {
+        
+    }
+/* ============================================================== */
+/* メイン */
+.main {
+    background-color: blue;
+    padding: 30px 35px;
+}
+    /* メイン画像 */
+    .main.img {
+        
+    }
+    
+    /* 閲覧した商品からのおすすめ&おすすめの商品 */
+    /* クラスをつなげると両方のクラスを持つもののみ適応される */
+    .section.txt {
+        color: rgb(153, 153, 153);
+        font-size: 23px;
+    }
+
+    /* 商品列 */
+    .content {
+        background-color: blueviolet;
+    }
+
+        /* 商品クラス列 */
+        .item-class {
+            display: flex;
+            justify-content: space-between;
+            background-color: aqua;
+        }
+
+            /* 商品クラス列左側 */
+            .item-class .left {
+                background-color: bisque;
+            }
+            /* 商品クラス列右側 */
+            .item-class .right {
+                background-color: brown;
+            }
+        /* 商品画像列 */
+        .item-box {
+            background-color: cadetblue;
+            display: flex;
+            justify-content: space-between;
+        }
+            /* 一つの商品 */
+            .item {
+                background-color: black;
+                width: 18%;
+            }
+                /* 商品画像と商品名共通 */
+                .item-in {
+                    width: 100%;
+                }
+                /* 商品画像 */
+                .item img {
+             
+                }
+
+                /* 商品名 */
+                .item p { 
+                    background-color: white; 
+                    text-align: center; 
+                    margin: 0px;
+                }
+
+
+    
+/* ============================================================== */
+/* フッター */
+footer {
+    background-color: green;
+    padding: 0px 35px
+}
+    .foot1 {
+            
+    }
+    .foot2 {
+        
+    }
+
+/* ============================================================== */

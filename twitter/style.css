@@ -1,0 +1,398 @@
+/* 全体共通部分 */
+body {
+  margin: 0px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  display: inline-block;
+  margin: 13px 5px;
+}
+
+.fa a {
+  width: 20px;
+  height: 20px;
+}
+
+a {
+  text-decoration: none !important;
+  color: black;      
+  display: block;
+}
+
+/* 左共通部分 */
+.left-contents {
+width: 300px;
+height: 1000px;
+position: absolute;
+}
+
+.left2-contents {
+  position: fixed;
+}
+
+
+/* position fixで基準がウィンドウ全体になるから、widthで指定とあるが、効かない。
+center-contentsで幅を指定した。レスポンシブデザインも対応済み。
+*/
+/* @media (max-width: 1000px) {
+  .left-contents {
+    width: 50px;
+  }
+} */
+
+/* アイコン部分 */
+.bird {
+  width: 30px;
+  height: 30px;
+  padding: 12px;
+}
+
+.icon .fa-lg::before {
+  position:relative;
+}
+
+.icon {
+  padding: 12px;
+}
+
+  /* pタグにまでhover動作が適応されるので除外する方法模索 */
+.icon i :hover {
+  border-radius: 50px;
+  background-color: rgba(15, 20, 25, 0.1);
+  width: 90px;
+  height: 30px;
+}
+
+/* ツイートボタン レスポンシブデザイン */
+.button a {
+  margin: 10px 0px;
+  padding: 10px 20px;
+  font-weight: 100px;
+  border-radius: 50px;
+  color:#fff;
+  font-weight: bold;
+  display: inline-block;
+  background: rgb(29, 155, 240);
+}
+
+.button :hover {
+  background-color: rgb(23, 137, 213);
+}
+
+
+.fa-feather {
+  background-color: rgb(29, 155, 240);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 10px;
+  right: 10px;
+}
+
+.icon p {
+  padding-left: 13px;
+  margin: 0 0;
+}
+
+.left-tweet {
+  padding: 10px 25px;
+  background:  rgb(0,170,236);
+}
+
+@media (max-width: 1000px) {
+  /* 1000px以下に適用されるCSS */
+  .icon p {
+    display: none;
+  }
+  .left-tweet {
+    display: none;
+  }
+  .button a {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* 1000px以上に適用されるCSS */
+  .left-contents .fa-feather {
+    display: none;
+  }
+}
+
+
+
+/* 中央部分 */
+.center-contents {
+  width: 550px;
+  margin: 0 30px 0 200px;
+  border-right: thin solid;
+  border-left: thin solid;
+  border-color: rgb(224, 230, 234);
+}
+
+@media (max-width: 1000px) {
+  .center-contents {
+    margin: 0 30px 0 65px;
+  }
+}
+
+.center-tweet {
+  padding: 5px 15px;
+  background: rgb(142,205,248);
+  text-align: right;
+}
+
+.home {
+  font-weight: bold;
+}
+
+.profile {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+}
+
+.tweet-now {
+  height: 60px;
+}
+
+.tweet-home {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  position: fixed;
+  /* width: 530px; */
+  height: 50px;
+  backdrop-filter: blur(20px);
+}
+
+.tweet-home .home {
+  display: inline-block;
+}
+.fa-star {
+  position: relative;
+  margin: 20px;
+}
+
+.tweet-top {
+  border-bottom: thin solid;
+  border-color: rgb(208, 215, 221);
+  padding: 0px 10px;
+  display: flex;
+  margin-top: 40px;
+}
+
+.tweet-top-profile {
+  flex-basis: 17%;
+}
+
+.tweet-top-contents {
+  flex-basis: 83%;
+}
+
+.now {
+  vertical-align: top;
+  color: rgb(98, 116, 129);
+  margin: 20px 0;
+}
+
+.tweet-top-below {
+  display: flex;
+  justify-content: space-between;
+}
+
+.center-tweet-icons {
+  color: rgb(0,170,236);
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  padding: 20px 0px;
+}
+
+.center-tweet-icons i {
+  padding: 0 6px;
+}
+
+.center-contents .button a {
+  opacity: 0.5;
+}
+
+.tweet-omit {
+  color: rgb(0,170,236);
+  text-align: center;
+  font-size: 15px;
+  border-bottom: thin solid;
+  border-color: rgb(208, 215, 221);
+}
+
+.tweet-middle {
+  padding: 0 0 0 10px;
+  border-bottom: thin solid;
+  border-color: rgb(208, 215, 221);
+  display: flex;
+}
+
+.tweet-middle-profile {
+  flex-basis: 17%;
+}
+
+.tweet-middle-contents {
+  flex-basis: 83%;
+}
+
+.tweet-middle-top {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  color: rgb(98, 116, 129);
+}
+
+.tweet-middle-profilename {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight:lighter
+}
+
+.tweet-middle-profilename p {
+  margin: 10px 2px 0px 0px;
+}  
+
+.tweet-middle-top i{
+  position: absolute; 
+  top: 60%;
+  left: 90%;
+  color: rgb(98, 116, 129);
+}
+
+.kuderi {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.hoge {
+  height: 50px;
+  vertical-align: top;
+  margin: 0 0 10px 0;
+}
+
+.tweet-middle-icons {
+display: flex;
+justify-content: space-between;
+padding: 0px 0px;
+margin-right: 20%;
+margin-bottom: 10px;
+color: rgb(98, 116, 129);
+}
+
+.tweet-last {  
+  display: flex;
+  padding: 0px 10px;
+  border-bottom: thin solid;
+  border-color: rgb(208, 215, 221);
+}
+
+/* 右部分   */
+/* 右の幅を決める */
+.right-contents {
+  width: 400px;
+}
+
+@media (max-width: 860px) {
+  .right-contents {
+    display: none;
+  }
+}
+
+.right-box {
+  width: 350px;
+}
+
+  /* 検索ボックス */
+.searchbox input {
+  position: fixed;
+  top: 3px;
+  /* margin-left: 4px; */
+  display: inline-block;
+  padding-left: 55px;
+  font-size: 15px;
+  height: 50px;
+  width: 300px;
+  background-color: rgb(234,241,241);
+  border: none;
+  border-radius: 30px;
+}
+
+.searchbox i {
+  /* position: relative; */
+  position: fixed;
+  top: 28px;
+  margin-left: 15px;
+  color: rgb(98, 116, 129);
+  z-index: 100;
+}
+
+  /* 検索ボックス hover*/
+.searchbox input :hover {
+  background-color: red;
+}
+/* 
+.searchbox input :hover + .searchbox i {
+  color: rgb(0,170,236);
+} */
+
+  /* トレンド情報 */
+.trend {
+  border-radius:20px;
+  background-color:rgb(234,241,241);
+  font-size: 13px;
+  height: auto;
+  color: rgb(98, 116, 129);
+  margin-top: 100px;
+}
+
+.topic-title {
+  color: black;
+  font-size: 19px;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+.trend-box {
+  padding: 10px 0px;
+}
+.trend-box p {
+  margin: 0 auto 0 0px;
+}
+
+.trend .fa-lg::before {
+  position: relative;
+  top: 10px;
+}
+
+.trend-line {
+  margin: 10px 15px;
+}
+
+.trend-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trend-title {
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.trend-subtitle span {
+  color: rgb(0,170,236);
+}
